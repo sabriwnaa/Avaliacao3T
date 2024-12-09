@@ -1,0 +1,9 @@
+{
+    "name": "aluno/avaliacao3t",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "require": {}
+}
