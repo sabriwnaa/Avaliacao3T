@@ -78,7 +78,7 @@ $produtos = Produto::filter($pesquisar, $filtro);
                     <h2>
                         <?php
                         $soma = Produto::calculateTotal($produtos);
-                        echo $soma;
+                        echo 'R$'.$soma.',00';
                         ?>
                     </h2>
                 </div>
@@ -91,12 +91,16 @@ $produtos = Produto::filter($pesquisar, $filtro);
             <div class="listagem">
                 <?php foreach ($produtos as $produto): ?>
                     <div class="produto">
-                        <h2><?= htmlspecialchars($produto->getDescricao()) ?></h2>
-                        <?= $produto->getCategoria() == 1 ? "Nacional" : "Importado" ?>
-                        <h2><?= $produto->getValor() ?></h2>
-                        <a href="formEdit.php?id=<?= $produto->getId() ?>">Editar</a>
-                        <a href="excluir.php?id=<?= $produto->getId() ?>">Excluir</a>
-                    </div>
+                        <div class='informacoes'>
+                            <h2><?= htmlspecialchars($produto->getDescricao()) ?></h2>
+                            <h5><?= $produto->getCategoria() == 1 ? "Nacional" : "Importado" ?><h5>
+                        </div>
+                        <div class='opcoes'>
+                            <a href="formEdit.php?id=<?= $produto->getId() ?>">Editar</a>
+                            <a href="excluir.php?id=<?= $produto->getId() ?>">Excluir</a>
+                        </div>
+                        <h3>R$<?= $produto->getValor() ?>,00</h3>
+                        </div>
                 <?php endforeach; ?>
             </div>
             
