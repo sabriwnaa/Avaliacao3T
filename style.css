@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
 }
 
 .container{
@@ -12,29 +13,87 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    font-family: 'Nunito', sans-serif;
-    color: #202636;
+    color: #282f43;
     
-    background-color: #dde7e0;
+    background-color: #e6f1e8;
 }
 
-.header, .main{
+.header, .main, .total, .cabecalho{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
    
 }
 
+.header, .main{
+    flex-direction: column;
+}
+
+
 .header{
     width: 100%;
     flex: 1;
-    background-color: #EBF5EE;
+    color: #71635b;
+    background-color: #eef9f2;
+    padding: 4%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.header h1{
+    font-size: 40px;
+}
+
+
+.main{
+    width: 100%;
+    flex: 14;
+}
+
+.total, .cabecalho, .limitacoes{
+    width: 100%;
+    justify-content: space-between;
+    padding:  1% 5%;
+}
+
+.limitacoes{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.total{
+    background-color: #282f43;
+    color: #eef9f2;
+}
+
+.cabecalho{
+    background-color: #eef9f2;
+    
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
-.main{
-    width: 100%;
-    flex: 6;
+.cabecalhos{
+    width: 100%; 
+    flex:1;
+    
+}
+
+.pesquisa, .filtro{
+    background-color: #78A1BB;
+    color: #1d2331;
+    border: 2px solid #1d2331;
+    padding: 2%;
+    border-radius: 7px;
+    font-size: 15px;
+}
+input::placeholder{
+    color: #1d2331;
+    font-style: italic;
+}
+
+.titulo{
+    color: #282f43;
+    font-size: 30px;
+    margin: 10px;
 }
