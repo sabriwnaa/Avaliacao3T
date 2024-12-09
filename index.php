@@ -27,7 +27,9 @@ $produtos = Produto::findall();
 <body>
     <div class="container">
         <div class="header">
-            <h1>Controle de Gastos</h1>
+            <h1>Controle de gastos</h1>
+            <h3>Gerencie suas compras nacionais e importadas e controle seus gastos</h3>
+        
         </div>
         <div class="main">
             <form action="index.php" method="post">
@@ -81,9 +83,6 @@ $produtos = Produto::findall();
             ?>
         </div>
 
-        <div class="footer">
-            <h3>Avaliação 3° trimestre em Programação III - Sabrina Hahn Melo</h3>
-        </div>
     </div>
 </body>
 </html>
