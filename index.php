@@ -85,10 +85,9 @@ $produtos = Produto::filter($pesquisar, $filtro);
                         ?>
                     </h2>
                 </div>
-                <div class="cabecalho">
-                    <h2>Produto</h2>
-                    <h2>Valor</h2>
-                </div>
+
+                <a href="formCad.php"> + Adicionar produto</a>
+                
             </div>
 
             <div class="listagem">
@@ -111,7 +110,7 @@ $produtos = Produto::filter($pesquisar, $filtro);
                 <?php endforeach; ?>
             </div>
             
-            <a href="formCad.php">Adicionar Produto</a>
+            
         </div>
     </div>
 </body>
