@@ -18,14 +18,14 @@
     background-color: #e6f0f1;
 }
 
-.header, .main, .total, .cabecalho, .produto, .todasInformacoes, .cabecalhos, .addProduto{
+.header, .main, .total, .cabecalho, .produto, .todasInformacoes, .cabecalhos, .addProduto, #formAddProduto{
     display: flex;
     align-items: center;
     justify-content: center;
    
 }
 
-.header, .main, .listagem, .produto, .cabecalhos{
+.header, .main, .listagem, .produto, .cabecalhos, #formAddProduto{
     flex-direction: column;
 }
 
@@ -170,17 +170,31 @@ input::placeholder{
 }
 
 .addProduto{
-    width: 100%;
+    width: 90%;
 }
 
 .addProduto button{
+    
+    border: none;
+    padding: 2%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    width: 100%;
+    
+}
+
+#addProduto, .addProduto button{
     background-color: #ffffff;
     color:#282f43;
-    border: none;
-    padding: 3%;
-    border-radius: 7px;
-    width: 90%;
+    padding: 2%;
+    
     font-size: 16px;
-    box-shadow: 0px 1px 20px rgba(192, 187, 185, 0.5);
+    
+}
+
+#addProduto{
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    width: 90%;
 
 }

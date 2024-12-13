@@ -114,7 +114,7 @@ $produtos = Produto::filter($pesquisar, $filtro);
                     <button onclick="toggleAddProduto()">+ Adicionar produto</button>
                 </div>
 
-                <div id="addProdutoExpand" style="display: none;">
+                <div id="addProduto" style="display: none;">
                     <form id="formAddProduto" onsubmit="enviarProduto(event)">
                         <div>
                             <label for="nome">Nome:</label>
