@@ -116,19 +116,19 @@ $produtos = Produto::filter($pesquisar, $filtro);
 
                 <div id="addProduto" style="display: none;">
                     <form id="formAddProduto" onsubmit="enviarProduto(event)">
-                        <div>
-                            <label for="nome">Nome:</label>
+                        <div class='campos'>
+                            <label for="nome">Nome</label>
                             <input type="text" id="nome" name="nome" required>
                         </div>
-                        <div>
-                            <label for="categoria">Categoria:</label>
+                        <div class='campos'>
+                            <label for="categoria">Categoria</label>
                             <select id="categoria" name="categoria" required>
                                 <option value="1">Nacional</option>
                                 <option value="2">Importado</option>
                             </select>
                         </div>
-                        <div>
-                            <label for="valor">Valor:</label>
+                        <div class='campos'>
+                            <label for="valor">Valor</label>
                             <input type="number" id="valor" name="valor" step="0.01" required>
                         </div>
                         <button type="submit">Salvar</button>
