@@ -49,7 +49,30 @@ $produtos = Produto::filter($pesquisar, $filtro);
         filtroSelect.addEventListener('change', applyFilter);
         pesquisaInput.addEventListener('input', applyFilter);
     };
+
+    function toggleAddProduto() {
+        const addProdutoDiv = document.getElementById('addProduto');
+        addProdutoDiv.style.display = addProdutoDiv.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function enviarProduto(event) {
+        event.preventDefault();
+
+        const formData = new FormData(document.getElementById('formAddProduto'));
+
+        fetch('processaProduto.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(result => {
+            alert(result); // Mensagem do backend
+            location.reload(); // Recarregar página para atualizar a lista
+        })
+        .catch(error => console.error('Erro:', error));
+    }
 </script>
+
 
 
 </head>
@@ -86,7 +109,35 @@ $produtos = Produto::filter($pesquisar, $filtro);
                     </h2>
                 </div>
 
-                <a href="formCad.php"> + Adicionar produto</a>
+                
+                <div class='addProduto'>
+                    <button onclick="toggleAddProduto()">+ Adicionar produto</button>
+                </div>
+
+                <div id="addProduto" style="display: none; margin-top: 20px;">
+                    <form id="formAddProduto" onsubmit="enviarProduto(event)">
+                        <div>
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div>
+                            <label for="categoria">Categoria:</label>
+                            <select id="categoria" name="categoria" required>
+                                <option value="1">Nacional</option>
+                                <option value="2">Importado</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="valor">Valor:</label>
+                            <input type="number" id="valor" name="valor" step="0.01" required>
+                        </div>
+                        <button type="submit">Salvar</button>
+                    </form>
+                </div>'
+
+
+
+
                 
             </div>
 

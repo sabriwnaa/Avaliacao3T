@@ -89,4 +89,11 @@ class Produto implements ActiveRecord {
         }
         return $soma;
     }
+
+    public static function add(string $descricao, string $categoria, float $valor): bool {
+        $conexao = new MySQL();
+        $sql = "INSERT INTO produtos (descricao, categoria, valor) VALUES ('{$descricao}', '{$categoria}', {$valor})";
+        return $conexao->executa($sql);
+    }
+    
 }
